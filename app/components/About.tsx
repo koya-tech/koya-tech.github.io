@@ -1,6 +1,5 @@
 // components/About.jsx
 
-import Image from "next/image";
 
 const About = () => {
     return (
@@ -21,7 +20,8 @@ const About = () => {
                         seeking out opportunities to improve my skills and knowledge.</p>
                 </div>
                 <div className="about-img">
-                    <Image src='/neom-kXbit_yx8t4-unsplash.jpg' className="profile-img" width={300} height={500} alt={""} />
+                    <img src='/neom-kXbit_yx8t4-unsplash.jpg' width={300} height={300} alt="Koya's aboutshot" className="profile-img" />
+
                 </div>
             </div>
         </div>
