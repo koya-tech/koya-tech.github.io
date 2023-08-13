@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
             <hr className="my-4" />
             <div className="flex justify-between items-center py-4 bg-zinc-800 text-white">
                 <p>
-                    © {new Date().getFullYear()} Koya's Portfolio
+                    © {new Date().getFullYear()} Koya&apos;s Portfolio
                 </p>
                 <div className="flex space-x-4">
                     <a

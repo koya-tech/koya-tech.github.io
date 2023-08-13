@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center p-4 bg-zinc-800 text-white">
             <div className="font-bold text-lg">
                 <Link href="/" legacyBehavior>
-                    <a>Koya's Portfolio</a>
+                    <a>Koya&apos;s Portfolio</a>
                 </Link>
             </div>
             {/* <a href="#" className="bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded">Resume</a> */}
