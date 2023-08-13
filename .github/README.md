@@ -4,7 +4,7 @@ This repository contains the code and content for my portfolio website, where I 
 
 ## Portfolio Screenshot
 
-<img src="./public/portfolio-screenshot.png" width="500px">
+<img src="./../public/portfolio-screenshot.png" width="500px">
 
 
 ## Getting Started
