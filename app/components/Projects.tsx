@@ -15,7 +15,7 @@ const Projects = () => {
                             <BiSolidFolderOpen />
                             <div className="small-icons">
                                 <a href={project.gitHubLink}>
-                                    {/* <BsGithub /> */}
+                                    <BsGithub />
                                 </a>
                             </div>
                         </div>

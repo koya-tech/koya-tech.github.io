@@ -3,18 +3,18 @@
 export const projectData = [
     {
         id: 1,
+        title: 'Jatflix',
+        description:
+            'Just A similar To Netflix. This is Netflix Clone App (UI).',
+        gitHubLink: 'https://github.com/koya-tech/jatflix',
+    },
+    {
+        id: 2,
         title: 'Coming soon ...',
         description:
             'I am in the process of making it',
         gitHubLink: '',
     },
-    // {
-    //     id: 2,
-    //     title: 'Books Library App',
-    //     description:
-    //         'A simple Book Library App built with JavaScript. It helps readers have a good list of books they are either currently reading or have finished reading.',
-    //     gitHubLink: 'https://github.com/olawanlejoel/Book-Library',
-    // },
     // {
     //     id: 3,
     //     title: 'Quotes Generator',
