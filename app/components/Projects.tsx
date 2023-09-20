@@ -12,7 +12,9 @@ const Projects = () => {
                 {projectData && projectData.map((project) => (
                     <div className="project-card" key={project.id}>
                         <div className="project-header">
-                            <BiSolidFolderOpen />
+                            <a href={project.demoUrl}>
+                                <BiSolidFolderOpen />
+                            </a>
                             <div className="small-icons">
                                 <a href={project.gitHubLink}>
                                     <BsGithub />
