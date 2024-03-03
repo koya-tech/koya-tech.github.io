@@ -11,11 +11,11 @@ export const projectData = [
     },
     {
         id: 2,
-        title: 'Blog Channel',
+        title: 'Switter',
         description:
-            'This is basic CRUD(Create, Read, Update, Delete) application. ',
-        gitHubLink: 'https://github.com/koya-tech/comet',
-        demoUrl: 'https://comet-bice.vercel.app/'
+            'This is Space themed basic CRUD(Create, Read, Update, Delete) application. ',
+        gitHubLink: 'https://github.com/koya-tech/thread-ky',
+        demoUrl: 'https://thread-ky.vercel.app/'
     },
     {
         id: 3,

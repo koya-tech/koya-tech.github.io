@@ -2,7 +2,7 @@
 
 import { projectData } from './data';
 import { BsGithub } from "react-icons/bs";
-import { BiSolidFolderOpen } from "react-icons/bi";
+import { GoProjectSymlink } from "react-icons/go";
 
 const Projects = () => {
     return (
@@ -13,7 +13,7 @@ const Projects = () => {
                     <div className="project-card" key={project.id}>
                         <div className="project-header">
                             <a href={project.demoUrl}>
-                                <BiSolidFolderOpen />
+                                <GoProjectSymlink />
                             </a>
                             <div className="small-icons">
                                 <a href={project.gitHubLink}>
