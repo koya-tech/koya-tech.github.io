@@ -1,18 +1,18 @@
 // components/Hero.jsx
 
+import { useTranslations } from "next-intl";
 import { BsTwitter } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 
 const Hero = () => {
+    const t = useTranslations('Hero');
     return (
         <div className="hero-container">
             <video src="/black_-_13495 (540p).mp4" className="profile-video" autoPlay loop muted playsInline></video>
             <img src="/bet1S7zthGoGnzw1682376001_1682376004.jpg" width={300} height={300} alt="Koya's personal headshot" className="profile-img" />
             <div className="hero-text">
-                <h1>Hey, I&apos;m Koya !</h1>
-                <p>
-                    I&apos;m a software developer based in Tokyo, Japan. I specialize in building websites, applications, and everything in between.
-                </p>
+                <h1>{t('name')}</h1>
+                <p>{t('greeting')}</p>
                 <div className="social-icons">
                     <a
                         href="https://twitter.com/koya_tech"

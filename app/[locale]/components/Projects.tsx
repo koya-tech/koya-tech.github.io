@@ -1,13 +1,15 @@
 // components/Projects.jsx
 
+import { useTranslations } from 'next-intl';
 import { projectData } from './data';
 import { BsGithub } from "react-icons/bs";
 import { GoProjectSymlink } from "react-icons/go";
 
 const Projects = () => {
+    const t = useTranslations('Project');
     return (
         <div className="projects-container">
-            <h2>Projects</h2>
+            <h2>{t('title')}</h2>
             <div className="projects-grid">
                 {projectData && projectData.map((project) => (
                     <div className="project-card" key={project.id}>
