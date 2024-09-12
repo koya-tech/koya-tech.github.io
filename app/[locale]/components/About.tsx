@@ -4,7 +4,7 @@ const About = () => {
     const t = useTranslations('About');
     return (
         <div className="about-container">
-            <h2>About Me</h2>
+            <h2>{t('title')}</h2>
             <div className="flex-about">
                 <div className="about-text">
                     <p>

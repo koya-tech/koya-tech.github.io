@@ -1,6 +1,7 @@
 // components/Navbar.jsx
 
 import Link from "next/link";
+import LocaleSwitcher from "../UIcomponents/LocaleSwitcher";
 
 const Navbar: React.FC = () => {
     return (
@@ -10,6 +11,7 @@ const Navbar: React.FC = () => {
                     <a>Koya&apos;s Portfolio</a>
                 </Link>
             </div>
+            <LocaleSwitcher />
             {/* <a href="#" className="bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded">Resume</a> */}
             {/* <a href="#" className="cta-btn">Resume</a> */}
         </div>
