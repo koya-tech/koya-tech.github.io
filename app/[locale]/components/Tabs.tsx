@@ -1,13 +1,15 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { tabData } from './data'
+import { activeTab } from './Hero';
+import { TabContext } from './TabContext';
 
 function Tabs() {
-    const [activeTab, setActivrTab] = useState(tabData[0].id);
+    const { activeTab, setActiveTab } = useContext(TabContext);
     return (
-        <div>
-            <div className='flex justify-center'>
+        <div className='tab-overall'>
+            {/* <div className='flex justify-center tab-menu'>
                 {tabData.map((data, index) => (
                     <button
                         key={data.id}
@@ -16,9 +18,9 @@ function Tabs() {
                         {data.title}
                     </button>
                 ))}
-            </div>
+            </div> */}
 
-            <div>
+            <div className='tab-content'>
                 {tabData.map((data, index) => (
                     data.id === activeTab && (
                         <div key={data.id}>
