@@ -11,11 +11,11 @@ export function generateStaticParams() {
 export default function Home() {
   return (
     <TabProvider>
-      <div className='flex'>
-        <div className='w-1/4 fixed'>
+      <div className='md:flex'>
+        <div className='w-full md:w-1/4 md:fixed'>
           <Hero />
         </div>
-        <div className='w-3/4 ml-auto'>
+        <div className='w-full md:w-3/4 md:ml-auto'>
           <Tabs />
         </div>
       </div>

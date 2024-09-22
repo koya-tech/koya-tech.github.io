@@ -2,7 +2,8 @@
 "use client"
 
 import { useTranslations } from "next-intl";
-import { BsTwitterX } from "react-icons/bs";
+import { BsTwitterX, BsX } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { tabData } from "./data";
@@ -14,6 +15,7 @@ let activeTabState = tabData[0].id;
 const Hero = () => {
     const t = useTranslations('Hero');
     const { activeTab, setActiveTab } = useContext(TabContext);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <div className="hero-container">
@@ -23,7 +25,13 @@ const Hero = () => {
 
             <img src="/bet1S7zthGoGnzw1682376001_1682376004.jpg" width={300} height={300} alt="Koya's personal headshot" className="profile-img" />
 
-            <div className="hero-text">
+            <div className="md:hidden z-10">
+                <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-3xl p-2">
+                    {isMenuOpen ? <BsX /> : <GiHamburgerMenu />}
+                </button>
+            </div>
+
+            <div className={`hero-text md:block ${isMenuOpen ? 'block' : 'hidden'}`}>
                 <p className="font-bold font-3xl">{t('name')}</p>
                 <p className="text-lg">{t('greeting')}</p>
 
@@ -76,6 +84,7 @@ const Hero = () => {
                 </div>
             </div>
         </div>
+        // </div >
     )
 }
 
