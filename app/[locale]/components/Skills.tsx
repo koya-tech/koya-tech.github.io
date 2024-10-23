@@ -1,6 +1,6 @@
 // components/Skills.jsx
 import { useTranslations } from "next-intl";
-import { blogEnData, devToolsData, frameworkLibraryData, programingLanguageData } from "./data";
+import { blogEnData, blogJpData, devToolsData, frameworkLibraryData, programingLanguageData } from "./data";
 
 type SkillItem = {
     icons: JSX.Element;
@@ -42,15 +42,19 @@ type BlogsItemProps = {
 
 const Blog: React.FC<BlogsItemProps> = ({ data }) => {
     return (
-        <div>
+        <div className="w-full px-4">
             {data.map((blog) => {
                 return (
-                    <div className="pr-4">
-                        <a href={blog.blogUrl} className="">
-                            <div className='flex border-2 rounded-md h-32 mt-4 items-stretch'>
-                                <div className="m-4" key={blog.id}>
-                                    <h3 className='font-bold text-2xl pb-3'>{blog.title}</h3>
-                                    <p>{blog.description}</p>
+                    <div key={blog.id} className="mb-4">
+                        <a href={blog.blogUrl}>
+                            <div className='flex border-2 rounded-md min-h-[8rem] items-stretch'>
+                                <div className="p-4 w-full overflow-hidden">
+                                    <h3 className='font-bold text-xl md:text-2xl pb-2 truncate'>
+                                        {blog.title}
+                                    </h3>
+                                    <p className="line-clamp-2 text-sm md:text-base">
+                                        {blog.description}
+                                    </p>
                                 </div>
                             </div>
                         </a>
@@ -83,15 +87,15 @@ const Skills = () => {
             <div className="flex pl-5 pb-5">
                 <div className="w-1/2">
                     <p className="text-3xl text-emerald-800 font-bold">
-                        English
+                        {t('BlogLang.eng')}
                     </p>
                     <Blog data={blogEnData} />
                 </div>
                 <div className="w-1/2">
                     <p className="text-3xl text-emerald-800 font-bold">
-                        Japanese
+                        {t('BlogLang.jp')}
                     </p>
-                    <Blog data={blogEnData} />
+                    <Blog data={blogJpData} />
                 </div>
             </div>
         </div>

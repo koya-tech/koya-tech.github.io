@@ -1,7 +1,7 @@
 // components/Navbar.jsx
 
 import Link from "next/link";
-import LocaleSwitcher from "../UIcomponents/LocaleSwitcher";
+import LocaleSwitcher from "../LocaleComponents/LocaleSwitcher";
 
 const Navbar: React.FC = () => {
     return (

@@ -8,8 +8,8 @@ export default function LocaleSwitcher() {
 
     return (
         <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
-            <option value="en">English</option>
-            <option value="jp">日本語</option>
+            <option value="en" className='text-sm text-black'>English</option>
+            <option value="jp" className='text-sm text-black'>日本語</option>
         </LocaleSwitcherSelect>
     );
 }

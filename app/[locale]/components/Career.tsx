@@ -1,12 +1,5 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-import { careerData } from './data';
 import { useTranslations } from 'next-intl';
-
-interface ExpandMoreProps extends IconButtonProps {
-    expand: boolean;
-}
 
 interface CareerCardProps {
     companyName: string;
@@ -14,33 +7,41 @@ interface CareerCardProps {
     position: string;
     startDate: string;
     endDate: string;
-    bodyText: string;
+    bodyText: {
+        para1: string;
+        para2: string;
+    };
     imagePath: string;
+    reference: string;
 }
 
-const ExpandMore = styled((props: ExpandMoreProps) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-})(({ theme }) => ({
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-    }),
-    // variants: [
-    //     {
-    //         props: ({ expand }) => !expand,
-    //         style: {
-    //             transform: 'rotate(0deg)',
-    //         },
-    //     },
-    //     {
-    //         props: ({ expand }) => !!expand,
-    //         style: {
-    //             transform: 'rotate(180deg)',
-    //         },
-    //     },
-    // ],
-}));
+// TODO
+// interface ExpandMoreProps extends IconButtonProps {
+//     expand: boolean;
+// }
+// const ExpandMore = styled((props: ExpandMoreProps) => {
+//     const { expand, ...other } = props;
+//     return <IconButton {...other} />;
+// })(({ theme }) => ({
+//     marginLeft: 'auto',
+//     transition: theme.transitions.create('transform', {
+//         duration: theme.transitions.duration.shortest,
+//     }),
+// variants: [
+//     {
+//         props: ({ expand }) => !expand,
+//         style: {
+//             transform: 'rotate(0deg)',
+//         },
+//     },
+//     {
+//         props: ({ expand }) => !!expand,
+//         style: {
+//             transform: 'rotate(180deg)',
+//         },
+//     },
+// ],
+// }));
 
 function CareerCard(props: CareerCardProps) {
     return (
@@ -50,11 +51,15 @@ function CareerCard(props: CareerCardProps) {
                 <time className="mb-1 text-sm font-normal leading-none text-gray-400">{props.startDate} - {props.endDate}</time>
                 <a href={props.companyLink} className=''><h3 className="text-xl font-semibold w-48">{props.companyName}</h3></a>
                 <p className="text-base font-normal pb-5">- {props.position}</p>
-                <p className="text-base font-normal">{props.bodyText}</p>
-                <a href="#" className="text-emerald-800 hover:underline">Read more →</a>
+                <p className="text-base font-normal">{props.bodyText.para1}</p>
+                <p className="text-base font-normal">{props.bodyText.para2}</p>
+                <br />
+                <a href={props.reference}>{props.reference}</a>
+                {/* <a href="#" className="text-emerald-800 hover:underline">Read more →</a> */}
+
             </div>
             <div className='w-1/4'>
-                <img src={props.imagePath} alt="" className='rounded-lg h-full object-fill' />
+                <img src={props.imagePath} alt="" className='rounded-lg h-full object-contain' />
             </div>
         </div>
     )
@@ -62,12 +67,55 @@ function CareerCard(props: CareerCardProps) {
 
 
 export default function Career() {
-    const [expanded, setExpanded] = React.useState(false);
+    // const [expanded, setExpanded] = React.useState(false);
     const t = useTranslations('Carrier');
 
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
+    // TODO
+    // const handleExpandClick = () => {
+    //     setExpanded(!expanded);
+    // };
+
+    const careerData = [
+        {
+            companyName: t('hitachi.companyName'),
+            companyLink: t('hitachi.companyLink'),
+            position: t('hitachi.position'),
+            startDate: t('hitachi.startDate'),
+            endDate: t('hitachi.endDate'),
+            bodyText: {
+                para1: t('hitachi.bodyText.para1'),
+                para2: t('hitachi.bodyText.para2'),
+            },
+            imagePath: t('hitachi.imagePath'),
+            reference: t('hitachi.reference')
+        },
+        {
+            companyName: t('universityOfTokyo.companyName'),
+            companyLink: t('universityOfTokyo.companyLink'),
+            position: t('universityOfTokyo.position'),
+            startDate: t('universityOfTokyo.startDate'),
+            endDate: t('universityOfTokyo.endDate'),
+            bodyText: {
+                para1: t('universityOfTokyo.bodyText.para1'),
+                para2: t('universityOfTokyo.bodyText.para2'),
+            },
+            imagePath: t('universityOfTokyo.imagePath'),
+            reference: t('universityOfTokyo.reference')
+        },
+        {
+            companyName: t('kyushuUniversity.companyName'),
+            companyLink: t('kyushuUniversity.companyLink'),
+            position: t('kyushuUniversity.position'),
+            startDate: t('kyushuUniversity.startDate'),
+            endDate: t('kyushuUniversity.endDate'),
+            bodyText: {
+                para1: t('kyushuUniversity.bodyText.para1'),
+                para2: t('kyushuUniversity.bodyText.para2'),
+            },
+            imagePath: t('kyushuUniversity.imagePath'),
+            reference: t('kyushuUniversity.reference')
+        },
+    ]
 
     return (
         <div>
@@ -82,13 +130,14 @@ export default function Career() {
                         return (
                             <div key={index}>
                                 <CareerCard
-                                    companyName={data.companyname}
+                                    companyName={data.companyName}
                                     companyLink={data.companyLink}
                                     position={data.position}
                                     startDate={data.startDate}
                                     endDate={data.endDate}
                                     bodyText={data.bodyText}
-                                    imagePath={data.imagePath} />
+                                    imagePath={data.imagePath}
+                                    reference={data.reference} />
                             </div>
                         )
                     })}

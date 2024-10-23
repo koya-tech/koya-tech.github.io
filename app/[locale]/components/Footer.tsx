@@ -38,3 +38,46 @@ const Footer: React.FC = () => {
 }
 
 export default Footer;
+
+//
+/* Footer */
+// hr {
+//     border: none;
+//     background-color: #9B9C9D;
+//     height: 1px;
+//     width: 80%;
+//     margin: 0 auto;
+//   }
+//   @media screen and (max-width: 768px) {
+//     hr {
+//       width: 100%;
+//     }
+//   }
+//   .footer-container {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     padding: 2rem 0;
+//     background-color: #1D1E20;
+//   }
+//   .footer-container p {
+//     font-size: 0.8rem;
+//     color: #9B9C9D;
+//     padding: 0 2rem;
+//   }
+//   .footer-container .social_icons {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     gap: 0 2rem;
+//   }
+
+//   .footer-container .social_icons a {
+//     color: #9B9C9D;
+//     font-size: 1.5rem;
+//     transition: all 0.5s ease-in-out;
+//   }
+
+//   .footer-container .social_icons a:hover {
+//     color: #DADADB;
+//   }

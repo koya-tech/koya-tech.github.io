@@ -8,7 +8,7 @@ import { TabContext } from './TabContext';
 function Tabs() {
     const { activeTab, setActiveTab } = useContext(TabContext);
     return (
-        <div className='tab-overall'>
+        <div className='p-2'>
             {/* <div className='flex justify-center tab-menu'>
                 {tabData.map((data, index) => (
                     <button
@@ -20,7 +20,7 @@ function Tabs() {
                 ))}
             </div> */}
 
-            <div className='tab-content'>
+            <div className='p-4'>
                 {tabData.map((data, index) => (
                     data.id === activeTab && (
                         <div key={data.id}>

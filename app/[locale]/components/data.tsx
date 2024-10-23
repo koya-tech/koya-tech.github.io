@@ -12,19 +12,47 @@ import { RiNextjsFill } from "react-icons/ri";
 export const blogEnData = [
     {
         id: 1,
-        title: 'Jatflix',
+        title: 'How docker work on windows',
         description:
-            'Just A similar To Netflix. This is Netflix Clone App (UI).',
-        blogUrl: 'https://jatflix-e6701.web.app/',
+            'This article focused on "How Docker works on windows" and explain the system by using image',
+        blogUrl: 'https://dev.to/koya-tech/how-docker-works-on-windows-1gn6',
     },
     {
         id: 2,
-        title: 'Jatflix',
+        title: 'Compound Pattern:React Design Pattern',
         description:
-            'Just A similar To Netflix. This is Netflix Clone App (UI).',
-        blogUrl: 'https://jatflix-e6701.web.app/',
+            'I introduced one of React’s design patterns — the compound pattern — and show how it can assist in solving these common problems.',
+        blogUrl: 'https://medium.com/@koya9431ptr/compound-pattern-react-design-pattern-80e5cb2c2a1d',
     },
+    {
+        id: 3,
+        title: 'Java Design Pattern:Credential Design',
+        description: 'Design Patterns in Java solve design issues in specific contexts.In this article and next, I focus on “Credential Design Pattern”.',
+        blogUrl: 'https://medium.com/@koya9431ptr/design-pattern-in-java-ed3bd331c195',
+    }
+];
 
+export const blogJpData = [
+    {
+        id: 1,
+        title: '【イラストで分かる】windowsで動くDockerの仕組み',
+        description:
+            'windows上でDockerが動く仕組みをイラストを使いながら解説した記事。',
+        blogUrl: 'https://zenn.dev/koya_tech/articles/9ba0df8ca3e4d0',
+    },
+    {
+        id: 2,
+        title: '【イラストで分かる】Reactとライフサイクル',
+        description:
+            'Reactの実装においてライフサイクルは重要です。そのライフサイクルについて、イラストを用いながら説明した記事。',
+        blogUrl: 'https://zenn.dev/koya_tech/articles/16d8b11b5062bd',
+    },
+    {
+        id: 3,
+        title: '【イラストで分かる】React Hook',
+        description: 'よく使用されるReact hookについて、イラストを用いながら概要を説明した記事。',
+        blogUrl: 'https://zenn.dev/koya_tech/articles/595d13699d1cdf',
+    }
 ];
 
 export const devToolsData = [
@@ -120,51 +148,28 @@ export const programingLanguageData = [
     },
 ]
 
-export const careerData = [
-    {
-        companyname: "Hitachi",
-        companyLink: "https://www.hitachi.com/",
-        position: "Software Engineer (Permanent)",
-        startDate: "2022/04/01",
-        endDate: "2024/07/26",
-        bodyText: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sit doloremque sapiente incidunt eligendi dolore.Dolorum obcaecati sed voluptatibus, in inventore excepturi aliquid aut iste maxime quam vel, esse quo voluptatem!",
-        imagePath: "/Hitachi-Logo.jpg",
-    },
-    {
-        companyname: "University of Tokyo",
-        companyLink: "https://www.u-tokyo.ac.jp/en/",
-        position: "Student (Master of Science)",
-        startDate: "2020/04/01",
-        endDate: "2022/03/31",
-        bodyText: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sit doloremque sapiente incidunt eligendi dolore.Dolorum obcaecati sed voluptatibus, in inventore excepturi aliquid aut iste maxime quam vel, esse quo voluptatem!",
-        imagePath: "/Yasuda_Auditorium_-_Tokyo_University_3.jpg",
-    },
-    {
-        companyname: "Kyushu University",
-        companyLink: "https://www.kyushu-u.ac.jp/en/",
-        position: "Student (Bachelor of Engineering)",
-        startDate: "2016/04/01",
-        endDate: "2020/03/31",
-        bodyText: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sit doloremque sapiente incidunt eligendi dolore.Dolorum obcaecati sed voluptatibus, in inventore excepturi aliquid aut iste maxime quam vel, esse quo voluptatem!",
-        imagePath: "/pict-about-01-sp.jpg",
-    },
-]
-
 export const projectData = [
     {
         id: 1,
         title: 'Jatflix',
-        description:
-            'Just A similar To Netflix. This is Netflix Clone App (UI).Lorem ipsum dolor sit amet consectetur adipisicing elit.Sit doloremque sapiente incidunt eligendi dolore.Dolorum obcaecati sed voluptatibus, in inventore excepturi aliquid aut iste maxime quam vel, esse quo voluptatem!',
+        description: {
+            para1: 'Just A similar To Netflix.',
+            para2: 'This is Netflix Clone App (UI).Created using react. When you click on the button, youtube video related to the work will play. The information for each ranking is obtained from The Movie DataBase (TMDB).'
+        },
         gitHubLink: 'https://github.com/koya-tech/jatflix',
         demoUrl: 'https://jatflix-e6701.web.app/',
-        imagePath: '/Screenshot 2024-09-20 105413.jpg'
+        imagePath: '/Screenshot 2024-09-20 105413.jpg',
+        tech: [
+            "React", "Firebase", "API"
+        ]
     },
     {
         id: 2,
         title: 'Coming soon ...',
-        description:
-            'I am in the process of making it Just A similar To Netflix. This is Netflix Clone App (UI).Lorem ipsum dolor sit amet consectetur adipisicing elit.Sit doloremque sapiente incidunt eligendi dolore.Dolorum obcaecati sed voluptatibus, in inventore excepturi aliquid aut iste maxime quam vel, esse quo voluptatem!',
+        description: {
+            para1: '',
+            para2: ''
+        },
         gitHubLink: '',
         demoUrl: '',
         imagePath: '',
