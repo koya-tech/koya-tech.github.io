@@ -68,12 +68,6 @@ function CareerCard(props: CareerCardProps) {
 
 
 export default function Career() {
-    // const [expanded, setExpanded] = React.useState(false);
-    const locale = useLocale();
-
-    // Set the locale to enable static rendering
-    // unstable_setRequestLocale(locale);
-    const t = useTranslations('Carrier');
 
     // TODO
     // const handleExpandClick = () => {
@@ -82,43 +76,43 @@ export default function Career() {
 
     const careerData = [
         {
-            companyName: t('hitachi.companyName'),
-            companyLink: t('hitachi.companyLink'),
-            position: t('hitachi.position'),
-            startDate: t('hitachi.startDate'),
-            endDate: t('hitachi.endDate'),
+            companyName: "Hitachi, Ltd.",
+            companyLink: "https://www.hitachi.com/",
+            position: "Software Engineer (Permanent)",
+            startDate: "2022/04/01",
+            endDate: "2024/07/26",
             bodyText: {
-                para1: t('hitachi.bodyText.para1'),
-                para2: t('hitachi.bodyText.para2'),
+                para1: "As a software engineer, developing management software applications for hardware products.",
+                para2: "Experienced in Scrum and Agile development methods. Experienced a wide range of front-end, back-end, and testing processes. Also participated in a generative AI project."
             },
-            imagePath: t('hitachi.imagePath'),
-            reference: t('hitachi.reference')
+            imagePath: "/Hitachi-Logo.jpg",
+            reference: ""
         },
         {
-            companyName: t('universityOfTokyo.companyName'),
-            companyLink: t('universityOfTokyo.companyLink'),
-            position: t('universityOfTokyo.position'),
-            startDate: t('universityOfTokyo.startDate'),
-            endDate: t('universityOfTokyo.endDate'),
+            companyName: "University of Tokyo",
+            companyLink: "https://www.u-tokyo.ac.jp/en/",
+            position: "Student (Master of Science)",
+            startDate: "2020/04/01",
+            endDate: "2022/03/31",
             bodyText: {
-                para1: t('universityOfTokyo.bodyText.para1'),
-                para2: t('universityOfTokyo.bodyText.para2'),
+                para1: "Research theme is [Three-dimensional hand guidance by midair haptic display].",
+                para2: " Proposed a method of guidance to an arbitrary 3D location using ultrasonic tactile sensation for visually impaired people and in situations where visibility is poor. I have presented his research at several academic conferences."
             },
-            imagePath: t('universityOfTokyo.imagePath'),
-            reference: t('universityOfTokyo.reference')
+            imagePath: "/hapticsPaper.png",
+            reference: "https://arxiv.org/abs/2304.11413"
         },
         {
-            companyName: t('kyushuUniversity.companyName'),
-            companyLink: t('kyushuUniversity.companyLink'),
-            position: t('kyushuUniversity.position'),
-            startDate: t('kyushuUniversity.startDate'),
-            endDate: t('kyushuUniversity.endDate'),
+            companyName: "Kyushu University",
+            companyLink: "https://www.kyushu-u.ac.jp/en/",
+            position: "Student (Bachelor of Engineering)",
+            startDate: "2016/04/01",
+            endDate: "2020/03/31",
             bodyText: {
-                para1: t('kyushuUniversity.bodyText.para1'),
-                para2: t('kyushuUniversity.bodyText.para2'),
+                para1: "Studied mechanical engineering, especially marine engineering.",
+                para2: "Research theme was on the application of image recognition technology using Machine Learning to the factory (the content of this research was undisclosed because it was conducted in collaboration with a company). Experienced in design drawing and simulation of large offshore structures."
             },
-            imagePath: t('kyushuUniversity.imagePath'),
-            reference: t('kyushuUniversity.reference')
+            imagePath: "/shipDesign.jpg",
+            reference: ""
         },
     ]
 
@@ -126,7 +120,7 @@ export default function Career() {
         <div>
             <div className="pl-4">
                 <div className="text-4xl font-bold py-1">
-                    <h2>{t('title')}</h2>
+                    <h2>Carrier</h2>
                 </div>
             </div>
             <div className="p-8 min-h-screen">

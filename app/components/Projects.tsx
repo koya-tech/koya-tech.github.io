@@ -1,11 +1,6 @@
-// components/Projects.jsx
-
-import { useLocale, useTranslations } from 'next-intl';
 import { projectData } from './data';
 import { BsGithub } from "react-icons/bs";
 import { GoProjectSymlink } from "react-icons/go";
-import { Limelight } from 'next/font/google';
-import { unstable_setRequestLocale } from 'next-intl/server';
 
 type SkillsItemProps = {
     data: string[];
@@ -26,16 +21,11 @@ const ProjectSkill: React.FC<SkillsItemProps> = ({ data }) => {
 }
 
 const Projects = () => {
-    const locale = useLocale();
-
-    // Set the locale to enable static rendering
-    // unstable_setRequestLocale(locale);
-    const t = useTranslations('Project');
     return (
         <div className="w-full px-4">
             <div className="mb-4">
                 <div className="text-2xl md:text-4xl font-bold py-4">
-                    <h2>{t('title')}</h2>
+                    <h2>Personal Projects</h2>
                 </div>
             </div>
             {projectData && projectData.map((project) => (

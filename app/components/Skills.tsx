@@ -68,15 +68,10 @@ const Blog: React.FC<BlogsItemProps> = ({ data }) => {
 
 
 const Skills = () => {
-    const locale = useLocale();
-
-    // Set the locale to enable static rendering
-    // unstable_setRequestLocale(locale);
-    const t = useTranslations('Skill');
     return (
         <div className="pl-4">
             <div className="text-4xl font-bold py-4">
-                <h2>{t('title')}</h2>
+                <h2>Skills</h2>
             </div>
             <div className="pl-5 pb-5">
                 <p className="text-3xl text-emerald-800 font-bold">Programing Language</p>
@@ -92,13 +87,13 @@ const Skills = () => {
             <div className="flex pl-5 pb-5">
                 <div className="w-1/2">
                     <p className="text-3xl text-emerald-800 font-bold">
-                        {t('BlogLang.eng')}
+                        English
                     </p>
                     <Blog data={blogEnData} />
                 </div>
                 <div className="w-1/2">
                     <p className="text-3xl text-emerald-800 font-bold">
-                        {t('BlogLang.jp')}
+                        Japanese
                     </p>
                     <Blog data={blogJpData} />
                 </div>
