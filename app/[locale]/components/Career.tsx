@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 interface CareerCardProps {
     companyName: string;
@@ -68,6 +69,10 @@ function CareerCard(props: CareerCardProps) {
 
 export default function Career() {
     // const [expanded, setExpanded] = React.useState(false);
+    const locale = useLocale();
+
+    // Set the locale to enable static rendering
+    unstable_setRequestLocale(locale);
     const t = useTranslations('Carrier');
 
     // TODO

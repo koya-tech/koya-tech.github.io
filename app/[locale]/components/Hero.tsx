@@ -1,7 +1,7 @@
 // components/Hero.jsx
 "use client"
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { BsTwitterX, BsX } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsGithub } from "react-icons/bs";
@@ -11,10 +11,15 @@ import { useContext, useState } from "react";
 import { TabContext } from "./TabContext";
 import LocaleSwitcher from "../LocaleComponents/LocaleSwitcher";
 import Buymeacoffee from "../LocaleComponents/BuyMeCoffee";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 let activeTabState = tabData[0].id;
 
 const Hero = () => {
+    const locale = useLocale();
+
+    // Set the locale to enable static rendering
+    unstable_setRequestLocale(locale);
     const t = useTranslations('Hero');
     const { activeTab, setActiveTab } = useContext(TabContext);
     const [isMenuOpen, setIsMenuOpen] = useState(false);

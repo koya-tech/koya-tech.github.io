@@ -2,6 +2,8 @@
 
 import { usePathname, useRouter } from '@/i18n/routing';
 import clsx from 'clsx';
+import { useLocale } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { useParams } from 'next/navigation';
 import { ChangeEvent, ReactNode, useTransition } from 'react';
 
@@ -16,6 +18,10 @@ export default function LocaleSwitcherSelect({
     defaultValue,
     label
 }: Props) {
+    const locale = useLocale();
+
+    // Set the locale to enable static rendering
+    unstable_setRequestLocale(locale);
     const router = useRouter();
     const [isPending, startTransition] = useTransition();
     const pathname = usePathname();

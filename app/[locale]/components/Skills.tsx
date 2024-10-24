@@ -1,6 +1,7 @@
 // components/Skills.jsx
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { blogEnData, blogJpData, devToolsData, frameworkLibraryData, programingLanguageData } from "./data";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 type SkillItem = {
     icons: JSX.Element;
@@ -67,6 +68,10 @@ const Blog: React.FC<BlogsItemProps> = ({ data }) => {
 
 
 const Skills = () => {
+    const locale = useLocale();
+
+    // Set the locale to enable static rendering
+    unstable_setRequestLocale(locale);
     const t = useTranslations('Skill');
     return (
         <div className="pl-4">
