@@ -1,9 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -11,17 +8,17 @@ export const metadata: Metadata = {
   description: `Koya's Portfolio`,
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: { locale }
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
+  params: { locale: string };
 }) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={inter.className}>
-        <Navbar />
         {children}
-        <Footer />
       </body>
 
     </html>

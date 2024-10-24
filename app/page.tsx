@@ -1,20 +1,19 @@
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
 import './globals.css'
-
+import Tabs from './components/Tabs'
+import { Hero } from './components/Hero'
+import { TabProvider } from './components/TabContext';
 
 export default function Home() {
   return (
-    <div>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </div>
-
+    <TabProvider>
+      <div className='md:flex'>
+        <div className='w-full md:w-1/4 md:fixed'>
+          <Hero />
+        </div>
+        <div className='w-full md:w-3/4 md:ml-auto'>
+          <Tabs />
+        </div>
+      </div>
+    </TabProvider>
   )
 }
