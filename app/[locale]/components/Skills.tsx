@@ -71,7 +71,7 @@ const Skills = () => {
     const locale = useLocale();
 
     // Set the locale to enable static rendering
-    unstable_setRequestLocale(locale);
+    // unstable_setRequestLocale(locale);
     const t = useTranslations('Skill');
     return (
         <div className="pl-4">

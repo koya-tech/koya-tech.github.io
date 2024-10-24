@@ -72,7 +72,7 @@ export default function Career() {
     const locale = useLocale();
 
     // Set the locale to enable static rendering
-    unstable_setRequestLocale(locale);
+    // unstable_setRequestLocale(locale);
     const t = useTranslations('Carrier');
 
     // TODO

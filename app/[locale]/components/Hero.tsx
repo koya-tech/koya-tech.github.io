@@ -16,11 +16,11 @@ import { unstable_setRequestLocale } from "next-intl/server";
 let activeTabState = tabData[0].id;
 
 const Hero = () => {
-    const locale = useLocale();
+    // const locale = useLocale();
 
     // Set the locale to enable static rendering
-    unstable_setRequestLocale(locale);
-    const t = useTranslations('Hero');
+    // unstable_setRequestLocale(locale);
+    // const t = useTranslations('Hero');
     const { activeTab, setActiveTab } = useContext(TabContext);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -49,8 +49,10 @@ const Hero = () => {
             </div>
 
             <div className={`mx-8 md:block ${isMenuOpen ? 'block' : 'hidden'}`}>
-                <p className="font-bold text-2xl pb-4">{t('name')}</p>
-                <p className="text-2xl pb-6">{t('greeting')}</p>
+                {/* <p className="font-bold text-2xl pb-4">{t('name')}</p> */}
+                <p className="font-bold text-2xl pb-4">Koya_Tech</p>
+                {/* <p className="text-2xl pb-6">{t('greeting')}</p> */}
+                <p className="text-2xl pb-6">Software Engineer based in Vancouver, Canada.</p>
                 <div className='py-7 text-2xl'>
                     <p className="font-bold text-xl pb-4">Portfolio Content</p>
                     <div className="pb-6">

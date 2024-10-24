@@ -1,12 +1,11 @@
 import { useLocale, useTranslations } from 'next-intl';
 import LocaleSwitcherSelect from './LocaleSwitcherSelect';
-import { routing } from '@/i18n/routing';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
 export default function LocaleSwitcher() {
-    const t = useTranslations('LocaleSwitcher');
     const locale = useLocale();
-    unstable_setRequestLocale(locale);
+    // unstable_setRequestLocale(locale);
+    const t = useTranslations('LocaleSwitcher');
 
     return (
         <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>

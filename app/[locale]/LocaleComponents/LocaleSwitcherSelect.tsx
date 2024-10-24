@@ -21,7 +21,7 @@ export default function LocaleSwitcherSelect({
     const locale = useLocale();
 
     // Set the locale to enable static rendering
-    unstable_setRequestLocale(locale);
+    // unstable_setRequestLocale(locale);
     const router = useRouter();
     const [isPending, startTransition] = useTransition();
     const pathname = usePathname();

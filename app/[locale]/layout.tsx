@@ -12,8 +12,17 @@ export const metadata: Metadata = {
   description: `Koya's Portfolio`,
 }
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+// export function generateStaticParams() {
+//   return routing.locales.map((locale) => ({ locale }));
+// }
+
+export async function generateStaticParams() {
+  // return routing.locales.map((locale) => ({ locale }));
+  const locales = ['en', 'jp']; // Define your locales
+
+  return locales.map((locale) => ({
+    locale,
+  }));
 }
 
 export default async function RootLayout({

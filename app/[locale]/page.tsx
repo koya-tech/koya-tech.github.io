@@ -6,20 +6,20 @@ import { TabProvider } from './components/TabContext';
 import { useLocale } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
-export async function generateStaticParams() {
-  // return routing.locales.map((locale) => ({ locale }));
-  const locales = ['en', 'jp']; // Define your locales
+// export async function generateStaticParams() {
+//   // return routing.locales.map((locale) => ({ locale }));
+//   const locales = ['en', 'jp']; // Define your locales
 
-  return locales.map((locale) => ({
-    locale,
-  }));
-}
+//   return locales.map((locale) => ({
+//     locale,
+//   }));
+// }
 
 export default function Home() {
-  const locale = useLocale();
+  // const locale = useLocale();
 
-  // Set the locale to enable static rendering
-  unstable_setRequestLocale(locale);
+  // // Set the locale to enable static rendering
+  // unstable_setRequestLocale(locale);
   return (
     <TabProvider>
       <div className='md:flex'>
